@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import Login from './Login';
 import JournalForm from './JournalForm';
 import JournalList from './JournalList';
+import JournalPreview from './JournalPreview'
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
     <NavBar />
     <Login />
     <JournalForm />
+    <JournalList />
+    <JournalPreview />
   
     </div>
   );
