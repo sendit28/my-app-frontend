@@ -47,7 +47,8 @@ function JournalForm({ setJournallist }) {
         <input type="submit"></input>
       </form>
     </div>
-  
+  // need update and delete button on list and/or preview
+  // category option
   
     )
 }
