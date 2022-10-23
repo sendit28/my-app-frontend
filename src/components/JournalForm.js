@@ -36,7 +36,17 @@ function JournalForm({ setJournallist }) {
   
   
   return (
-    <div>JournalForm</div>
+    <div className="journal-form">JournalForm
+      <form onSubmit={handleSubmit}>
+        <label>Title </label>
+        <input name="title" type="text" onChange={handleChange} value={formData.title}></input>
+        <label>Date </label>
+        <input name="date" type="text" onChange={handleChange} value={formData.date}></input>
+        <label>Journal Entry </label>
+        <input name="content" type="text" onChange={handleChange} value={formData.content}></input>
+        <input type="submit"></input>
+      </form>
+    </div>
   
   
     )
