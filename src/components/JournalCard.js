@@ -19,4 +19,5 @@ function JournalCard({ id, title, content, date }) {
 }
 
 // all in one element? h4...
+// not in app in user's home page
 export default JournalCard
