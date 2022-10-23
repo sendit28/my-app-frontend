@@ -10,7 +10,7 @@ function JournalList({ journallist }) {
   
   
   return (
-    <div>{journalentries}</div>
+    <div className="journal-list">{journalentries}</div>
   )
 }
 
