@@ -1,7 +1,7 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory } from "react-router-dom"
 
-function JournalCard({ id, title, content, date }) {
+function JournalCard({ id, title, date }) {
   
   let history = useHistory()
   
