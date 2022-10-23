@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { useParams} from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
-function JournalPreview() {
+function JournalPreview({ onDeleteJournal }) {
   const [journal, setJournal] = useState({})
   const { id } = useParams()
   const { title, date, content } = journal 
@@ -13,7 +13,15 @@ function JournalPreview() {
       .then(data => setJournal(data))
   }, [])
   
-  
+  function handleDeleteClick() {
+    fetch(`http://localhost:9292/journal_entries/${id}`, {
+      method: "DELETE",
+    })
+      .then((r) =>r.json())
+      .then((deletedJournal) => onDeleteJournal(deletedJournal))
+    }
+
+  // function
   
   return (
     <div className="journal-preview">
