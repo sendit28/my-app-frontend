@@ -21,11 +21,26 @@ function JournalPreview({ onDeleteJournal }) {
       .then((deletedJournal) => onDeleteJournal(deletedJournal))
     }
 
-  // function
+  // function handleSubmit (e) {
+  //   e.preventDefault();
+  //   fetch (`http://localhost:9292/journal_entries/$id}`, {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       title: title,
+  //       date: date,
+  //       content: content,
+  //     }),
+  //   })
+  //       .then((r) => r.json())
+  //       .then((updatedJournalEntry) => onUpdateJournalEntry(updatedJournalEntry))
+  // }
+  
   
   return (
     <div className="journal-preview">
-
 
       <label htmlFor= "title"> Title </label>
       <p>{title}</p> 
