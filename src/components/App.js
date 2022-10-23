@@ -1,43 +1,24 @@
-import React, {useState } from 'react';
+import React, { useState, useEffect } from 'react';
 // import './App.css';
 import NavBar from './NavBar';
 import Login from './Login';
+import JournalForm from './JournalForm';
 
 function App() {
+
+  const [journallist, setJournallist] = useState([])
+
+  useEffect (() => {
+    fetch("http://localhost:9292/journal_entries")
+      .then(r => r.json())
+      .then(data =>setJournallist)
+  }, [])
  
- const initialState = {
-  title: "",
-  date: "",
-  content: "",
- }
-
- const [formData, setFormData] = useState(initialState)
-
- const handleSubmit = (e) => {
-  e.preventDefault()
- }
- const handleChange = (e) => {
-  setFormData({
-    ...formData,
-    [e.target.name]: e.target.value
-  })
- }
+ 
 
 
 
-//   fetch(http://localhost:9292/journal_entries", {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify(formData)
-//   })
-//     .then(r=> r.j.son())
-//     .then(data => set................))
-
-//     setFormData(initialState)
-
-//  }
+  
  
  
   return (
@@ -45,6 +26,7 @@ function App() {
       hello
     <NavBar/>
     <Login/>
+    <JournalForm/>
     
     <form onSubmit={handleSubmit}>
       <label>Title </label>
