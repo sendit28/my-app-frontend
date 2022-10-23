@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 // import './App.css';
-import NavBar from './components/NavBar';
-import Login from './components/Login';
-import JournalForm from './components/JournalForm';
+import NavBar from './NavBar';
+import Login from './Login';
+import JournalForm from './JournalForm';
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
     <NavBar/>
     <Login/>
     <JournalForm/>
-    
+
     </div>
   );
 }
