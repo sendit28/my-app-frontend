@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import NavBar from './NavBar';
 import Login from './Login';
 import JournalForm from './JournalForm';
+import JournalList from './JournalList';
 
 function App() {
 
@@ -19,10 +20,10 @@ function App() {
   return (
     <div className="App">
       hello
-    <NavBar/>
-    <Login/>
-    <JournalForm/>
-
+    <NavBar />
+    <Login />
+    <JournalForm />
+  
     </div>
   );
 }
