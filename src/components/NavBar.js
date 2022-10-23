@@ -10,6 +10,8 @@ function NavBar() {
  
   return (
     <div className="nav-bar">NavBar
+      <p> Welcome, User </p>
+      <h1> Journal TIme </h1>
       <div>
         <Link to="/"> Home </Link>
       </div>
