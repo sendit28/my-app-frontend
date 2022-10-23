@@ -29,7 +29,8 @@ function Login() {
 
   return (
     <div className="log-in">
-        <form onSubmit={handleSubmit}>
+      <h1> Time for Reflectiom</h1>
+      <form onSubmit={handleSubmit}>
         <label>Name </label>
         <input name="name" type="text" onChange={handleChange} value={credentials.name}></input>
         <label>Email </label>
