@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 // import './App.css';
-import NavBar from './NavBar';
-import Login from './Login';
-import JournalForm from './JournalForm';
+import NavBar from './components/NavBar';
+import Login from './components/Login';
+import JournalForm from './components/JournalForm';
 
 function App() {
 
@@ -16,11 +16,6 @@ function App() {
  
  
 
-
-
-  
- 
- 
   return (
     <div className="App">
       hello
@@ -28,16 +23,6 @@ function App() {
     <Login/>
     <JournalForm/>
     
-    <form onSubmit={handleSubmit}>
-      <label>Title </label>
-      <input name="title" type="text" onChange={handleChange} value={formData.title}></input>
-      <label>Date </label>
-      <input name="date" type="text" onChange={handleChange} value={formData.date}></input>
-      <label>Journal Entry </label>
-      <input name="content" type="text" onChange={handleChange} value={formData.content}></input>
-      <input type="submit"></input>
-    </form>
-
     </div>
   );
 }
