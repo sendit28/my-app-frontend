@@ -22,14 +22,14 @@ function App() {
   }
   return (
     <div className="App">
-      {/* <Login setUser={setUser} /> */}
+      
       {/* {user ? (
         <JournalForm setJournals={setJournals} user={user} />
         ) : null}
       */}
       <NavBar />
       <Routes>
-        <Route exact path="/journal_entries/new" element={<JournalForm setJournals={setJournals} />} />
+        <Route exact path="/journal_entries/new" element={<JournalForm setJournals={setJournals} user={user} />} />
         <Route exact path="/" element={<Login setUser={setUser} />} />  
         <Route exact path="/journal_entries" element={<JournalList journals={journals} handleDeleteJournal={handleDeleteJournal}/>} />
       </Routes>
