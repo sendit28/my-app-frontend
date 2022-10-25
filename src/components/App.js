@@ -22,11 +22,6 @@ function App() {
   }
   return (
     <div className="App">
-      
-      {/* {user ? (
-        <JournalForm setJournals={setJournals} user={user} />
-        ) : null}
-      */}
       <NavBar />
       <Routes>
         <Route exact path="/journal_entries/new" element={<JournalForm setJournals={setJournals} user={user} />} />
