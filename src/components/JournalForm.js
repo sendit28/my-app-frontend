@@ -50,9 +50,6 @@ function JournalForm({ setJournals, user }) {
         <input type="submit"></input>
       </form>
     </div>
-  // need update and delete button on list and/or preview
-  // category option
-  
     )
 }
 // , user_id: user.id
