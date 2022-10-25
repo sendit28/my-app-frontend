@@ -4,7 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
 import JournalForm from "./JournalForm";
 import JournalList from './JournalList';
-import JournalPreview from './JournalPreview'
+
 
 function App() {
   const [user, setUser] = useState(null);
@@ -32,7 +32,6 @@ function App() {
         <Route exact path="/journal_entries/new" element={<JournalForm setJournals={setJournals} />} />
         <Route exact path="/" element={<Login setUser={setUser} />} />  
         <Route exact path="/journal_entries" element={<JournalList journals={journals} handleDeleteJournal={handleDeleteJournal}/>} />
-        <Route exact path="/journal_entries/:id" element={<JournalPreview />} />
       </Routes>
     </div>
   );
