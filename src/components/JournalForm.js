@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from "react-router-dom"
 
-function JournalForm({ setJournallist }) {
-  
+function JournalForm({ setJournals, user }) {
+  const navigate = useNavigate()
   const initialState = {
     title: "",
     date: "",
@@ -20,17 +21,18 @@ function JournalForm({ setJournallist }) {
    const handleSubmit = (e) => {
     e.preventDefault()
    
+    const formDataCopy = {...formData}
   
     fetch("http://localhost:9292/journal_entries", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formDataCopy)
     })
-      .then(r=> r.j.son())
-      .then(data => setJournallist((journallist) => [...journallist, data]))
-
+      .then(r=> r.json())
+      .then(data => setJournals((journals) => [...journals, data]))
+      navigate("/journal_entries")
       setFormData(initialState)
     }
   
@@ -52,5 +54,5 @@ function JournalForm({ setJournallist }) {
   
     )
 }
-
+// , user_id: user.id
 export default JournalForm
