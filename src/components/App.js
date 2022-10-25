@@ -10,8 +10,7 @@ import JournalPreview from './JournalPreview'
 function App() {
   const [user, setUser] = useState(null);
   const [journals, setJournals] = useState([]);
-  console.log(setJournals)
-
+  
   useEffect(() => {
     fetch("http://localhost:9292/journal_entries")
       .then((r) => r.json())
@@ -37,9 +36,9 @@ function App() {
         />
 
         <Route exact path="/" element={<Login setUser={setUser} />} />
-          {/* <LogIn /> or <Home /> */} 
+         
 
-        <Route exact path="/journal_entries" element={<JournalList journals={journals} handleDeleteJournal/>} />
+        <Route exact path="/journal_entries" element={<JournalList journals={journals} handleDeleteJournal={handleDeleteJournal}/>} />
 
         <Route exact path="/journal_entries/:id" element={<JournalPreview />} />
       </Routes>
