@@ -39,13 +39,13 @@ function Login({ setUser }) {
 
   return (
     <div className="log-in">
-      <h1> Time for Reflection</h1>
+      <h2> Login </h2>
       <form onSubmit={handleSubmit}>
-        <label>Name </label>
+        <label>  Name  </label>
         <input name="name" type="text" onChange={handleChange} value={credentials.name}></input>
-        <label>Email </label>
+        <label>  Email  </label>
         <input name="email" type="text" onChange={handleChange} value={credentials.email}></input>
-        <label>Password </label>
+        <label>  Password  </label>
         <input name="password" type="text" onChange={handleChange} value={credentials.password}></input>
         <input type="submit"></input>
       </form>

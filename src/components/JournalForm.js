@@ -38,13 +38,14 @@ function JournalForm({ setJournals, user }) {
   
   
   return (
-    <div className="journal-form">JournalForm
+    <div className="journal-form">
+      <h2> Start your new journal entry here </h2>
       <form onSubmit={handleSubmit}>
-        <label>Title </label>
+        <label>  Title  </label>
         <input name="title" type="text" onChange={handleChange} value={formData.title}></input>
-        <label>Date </label>
+        <label>  Date  </label>
         <input name="date" type="text" onChange={handleChange} value={formData.date}></input>
-        <label>Journal Entry </label>
+        <label>  Journal Entry  </label>
         <input name="content" type="text" onChange={handleChange} value={formData.content}></input>
         <input type="submit"></input>
       </form>

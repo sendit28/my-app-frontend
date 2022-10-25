@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import './App.css';
 import NavBar from './NavBar';
 import { Routes, Route } from "react-router-dom";
 import Login from "./Login";
@@ -23,8 +22,6 @@ function App() {
   }
   return (
     <div className="App">
-      APP
-      
       {/* <Login setUser={setUser} /> */}
       {/* {user ? (
         <JournalForm setJournals={setJournals} user={user} />
@@ -32,14 +29,9 @@ function App() {
       */}
       <NavBar />
       <Routes>
-        <Route exact path="/journal_entries/new" element={<JournalForm setJournals={setJournals} />}
-        />
-
-        <Route exact path="/" element={<Login setUser={setUser} />} />
-         
-
+        <Route exact path="/journal_entries/new" element={<JournalForm setJournals={setJournals} />} />
+        <Route exact path="/" element={<Login setUser={setUser} />} />  
         <Route exact path="/journal_entries" element={<JournalList journals={journals} handleDeleteJournal={handleDeleteJournal}/>} />
-
         <Route exact path="/journal_entries/:id" element={<JournalPreview />} />
       </Routes>
     </div>
