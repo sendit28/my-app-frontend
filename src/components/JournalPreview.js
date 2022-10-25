@@ -13,13 +13,13 @@ function JournalPreview({ onDeleteJournal }) {
       .then(data => setJournal(data))
   }, [])
   
-  function handleDeleteClick() {
-    fetch(`http://localhost:9292/journal_entries/${id}`, {
-      method: "DELETE",
-    })
-      .then((r) =>r.json())
-      .then((deletedJournal) => onDeleteJournal(deletedJournal))
-    }
+  // function handleDeleteClick() {
+  //   fetch(`http://localhost:9292/journal_entries/${id}`, {
+  //     method: "DELETE",
+  //   })
+  //     .then((r) =>r.json())
+  //     .then((deletedJournal) => onDeleteJournal(deletedJournal))
+  //   }
 
   // function handleSubmit (e) {
   //   e.preventDefault();
