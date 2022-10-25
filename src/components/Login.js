@@ -1,6 +1,8 @@
 import React, { useState}  from 'react'
+import { useNavigate } from "react-router-dom"
 
-function Login() {
+function Login({ setUser }) {
+  const navigate = useNavigate()
   const [credentials, setCredentials] = useState({
     name: "",
     email: "",
@@ -17,8 +19,16 @@ function Login() {
 
     fetch("http://localhost:9292/users", config)
       .then(resp => resp.json())
-      .then(data => console.log(data))
+      .then(data => {
+        setUser(data)
+      setCredentials({
+        name: "",
+        email: "",
+        password: ""
+      })
+      })
       .catch(err => console.log(err))
+      navigate("/journal_entries")
   }
 
   const handleChange = ({target}) => {
@@ -29,7 +39,7 @@ function Login() {
 
   return (
     <div className="log-in">
-      <h1> Time for Reflectiom</h1>
+      <h1> Time for Reflection</h1>
       <form onSubmit={handleSubmit}>
         <label>Name </label>
         <input name="name" type="text" onChange={handleChange} value={credentials.name}></input>
