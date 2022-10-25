@@ -21,7 +21,7 @@ function JournalForm({ setJournals, user }) {
    const handleSubmit = (e) => {
     e.preventDefault()
    
-    const formDataCopy = {...formData}
+    const formDataCopy = {...formData , user_id: user.id}
   
     fetch("http://localhost:9292/journal_entries", {
       method: "POST",
